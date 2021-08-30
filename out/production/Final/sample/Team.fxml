@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.TeamSetting"
+            style="-fx-background-image: url(file:Teams.jpg);-fx-background-size: cover;-fx-background-repeat: no-repeat;">
+    <center>
+        <HBox alignment="CENTER" spacing="20">
+            <VBox translateY="320">
+                <Label wrapText="true" textFill="cadetblue" text="Attackers : ">
+                    <font>
+                        <Font size="20"/>
+                    </font>
+                </Label>
+                <Spinner fx:id="AttTeam" BorderPane.alignment="CENTER">
+                    <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory min="0" max="10"/>
+                    </valueFactory>
+                </Spinner>
+            </VBox>
+            <Button prefWidth="80" prefHeight="20" fx:id="create" onAction="#setTeam">
+            </Button>
+            <VBox translateY="320">
+                <Label wrapText="true" textFill="cadetblue" text="Defenders : ">
+                    <font>
+                        <Font size="20"/>
+                    </font>
+                </Label>
+                <Spinner fx:id="DefTeam" BorderPane.alignment="CENTER">
+                    <valueFactory>
+                        <SpinnerValueFactory.IntegerSpinnerValueFactory min="0" max="10"/>
+                    </valueFactory>
+                </Spinner>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

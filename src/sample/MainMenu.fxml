@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.MainMenu"
+            style="-fx-background-image: url(file:DOD2.jpg);-fx-background-size: cover;-fx-background-repeat: no-repeat;">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Button prefWidth="100" prefHeight="30" onAction="#newGame" text="New Game" style="-fx-background-color: #16697a "/>
+            <Button prefWidth="100" prefHeight="30" onAction="#loadSettings" text="Settings" style="-fx-background-color: #16697a "/>
+        </VBox>
+    </center>
+</BorderPane>

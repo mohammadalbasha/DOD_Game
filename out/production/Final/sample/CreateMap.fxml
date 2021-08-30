@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.CreateMap"
+            prefHeight="400.0" prefWidth="600.0" >
+    <left>
+        <VBox>
+            <HBox maxWidth="200">
+                <TextField fx:id="goToX" promptText="Target X" maxWidth="100"/>
+                <TextField fx:id="goToY" promptText="Target Y" maxWidth="100"/>
+                <Button prefHeight="30" prefWidth="200" onAction="#goToXY" text="Go"/>
+            </HBox>
+        </VBox>
+    </left>
+    <right>
+
+        <VBox maxWidth="50" maxHeight="50">
+            <Button fx:id="river" prefHeight="1000" prefWidth="1000" onAction="#setType">
+                <graphic>
+                    <ImageView fitHeight="50" fitWidth="50">
+                        <Image url="file:src\sample\Textures\river.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="valley" prefHeight="1000" prefWidth="1000" onAction="#setType">
+                <graphic>
+                    <ImageView fitHeight="50" fitWidth="50">
+                        <Image url="file:src\sample\Textures\valley.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="bridge" prefHeight="1000" prefWidth="1000" onAction="#setType">
+                <graphic>
+                    <ImageView fitHeight="50" fitWidth="50">
+                        <Image url="file:src\sample\Textures\bridge.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="delete" prefHeight="1000" prefWidth="1000" onAction="#setType" text="X" textFill="red"
+                    style="-fx-font-size : 30"/>
+        </VBox>
+    </right>
+    <center>
+        <BorderPane>
+            <top>
+                <HBox alignment="BOTTOM_CENTER">
+                    <Button fx:id="in" onAction="#moveBorder" text="Zoom In" prefWidth="100" prefHeight="30"/>
+                    <Button fx:id="out" onAction="#moveBorder" text="Zoom Out" prefWidth="100" prefHeight="30"/>
+                </HBox>
+            </top>
+            <center>
+                <ScrollPane fx:id="scroller">
+                    <GridPane fx:id="grid"
+                              style="-fx-border-color: black;-fx-border-insets: 0 -1 -1 0">
+                    </GridPane>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+    <left>
+
+        <HBox>
+            <TextField fx:id="MAPNAME" promptText="map name:"/>
+            <Button onAction="#create" text="create" >
+            </Button>
+        </HBox>
+
+    </left>
+</BorderPane>
+
+
+
+
+
+
+
+
+

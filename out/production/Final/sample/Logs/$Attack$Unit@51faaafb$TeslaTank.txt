@@ -1,0 +1,7 @@
+Attacked Unit@616b4a0dat position 363, 121 at time 1607794423015
+Attacked Unit@5382e973at position 392, 173 at time 1607794424675
+Got attacked at 493, 117 by Unit@7d774c07 at time 1607794424711
+Got attacked at 493, 117 by Unit@6b825944 at time 1607794424726
+Attacked Unit@5382e973at position 392, 173 at time 1607794426371
+Got attacked at 493, 117 by Falling off a bridge at time 1607794426448
+Died at 493, 117 at time 1607794426473

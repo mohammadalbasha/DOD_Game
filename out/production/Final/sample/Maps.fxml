@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="sample.Maps"
+            style="-fx-background-image: url(file:Maps.png);-fx-background-size: cover;-fx-background-repeat: no-repeat;"
+>
+    <center>
+        <HBox alignment="CENTER">
+            <ScrollPane maxHeight="400" maxWidth="200" fx:id="sp">
+                <ListView fx:id="lv" style="          -fx-control-inner-background: black ;">
+                </ListView>
+            </ScrollPane>
+            <VBox>
+                <Button style="-fx-background-color:black; -fx-text-fill: white ;-fx-border-style: solid solid none solid; -fx-border-width: 3; -fx-border-color: white;"
+                        translateY="300" translateX="5" prefWidth="100" prefHeight="30" fx:id="st" onAction="#start"
+                        text="Start"/>
+                <Button style="-fx-background-color:black; -fx-text-fill: white; -fx-border-style:  solid solid none solid ; -fx-border-width: 3; -fx-border-color: white;"
+                        translateX="5" translateY="310" prefWidth="100" prefHeight="30" fx:id="nm" onAction="#newMap"
+                        text="New Map"/>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

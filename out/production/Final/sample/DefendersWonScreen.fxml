@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.DefendersWonScreen"
+            style="-fx-background-image: url(file:defenderswonwallpaper.jpg);-fx-background-size: cover;-fx-background-repeat: no-repeat;">
+
+<center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label prefWidth="200" prefHeight="30" text="Defenders Won!" maxWidth="100"/>
+            <Button prefWidth="200" prefHeight="30" onAction="#exitGame" text="Exit Game" maxWidth="100" style="-fx-background-color: #16697a "/>
+        </VBox>
+    </center>
+</BorderPane>

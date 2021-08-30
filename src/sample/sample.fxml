@@ -1,0 +1,66 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox>
+            <Label alignment="CENTER" fx:id="timeLeft" text="Time lef : "/>
+            <Label text="         "/>
+        </HBox>
+    </top>
+    <left>
+        <VBox>
+            <Label fx:id="currentUnit"/>
+            <TextField fx:id="interruptionTime" promptText="Wait for 'n' seconds" maxWidth="200"/>
+            <Button prefHeight="30" prefWidth="200" onAction="#interruptUnit" text="Interrupt" style="-fx-background-color: #16697a "></Button>
+        </VBox>
+    </left>
+    <right>
+
+        <VBox>
+            <MenuBar >
+                <Menu fx:id="store" text="Store"/>
+            </MenuBar>
+            <Button fx:id="delete" prefHeight="50" prefWidth="50" onAction="#setType" text="X" textFill="red"
+                    style="-fx-font-size : 30;-fx-background-color: #16697a "/>
+        </VBox>
+    </right>
+    <center>
+        <BorderPane>
+            <top>
+                <HBox alignment="BOTTOM_CENTER">
+                    <Button fx:id="in" onAction="#moveBorder" text="Zoom In" prefWidth="100" prefHeight="30" style="-fx-background-color: #16697a "/>
+                    <Button fx:id="pause" onAction="#moveBorder" text="Pause/Resume" prefWidth="100" prefHeight="30" style="-fx-background-color: #16697a "/>
+                    <Button fx:id="out" onAction="#moveBorder" text="Zoom Out" prefWidth="100" prefHeight="30" style="-fx-background-color: #16697a "/>
+                    <VBox>
+                        <Label wrapText="true" textFill="cadetblue" alignment="TOP_RIGHT" fx:id="playerNum" text="">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                        <Label wrapText="true" textFill="cadetblue" fx:id="coins" text="Coins :">
+                            <font>
+                                <Font size="12"/>
+                            </font>
+                        </Label>
+                    </VBox>
+                </HBox>
+            </top>
+            <center>
+                <ScrollPane fx:id="scroller">
+                    <Pane fx:id="grid"
+                              style="-fx-border-color: black;-fx-border-insets: 0 -1 -1 0;-fx-background-color: lime;">
+                    </Pane>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
